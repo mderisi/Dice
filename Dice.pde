@@ -1,3 +1,6 @@
+
+
+
 Dice bob;
 boolean pressed = false;
 int counter = 0;
@@ -5,26 +8,33 @@ int counter = 0;
 void setup()
 {
   size(500, 600);
-  background(#FFD586);
+
+ background(#FFD586);
 }
 
 
-void mousePressed(){  
-  pressed = true;   
-}
+void mousePressed(){
   
-void draw(){
+  pressed = true;
+   
+}
 
- if (pressed == true){
+
+  
+void draw()
+{
+
+  
+  if (pressed == true){
   
   for (int y = 5; y < 500; y = y + 100){
-  	for (int x = 5; x < 500; x = x + 100){
-  		Dice bob = new Dice(x, y);  
-     		bob.show();
-    	}
- }
+    for (int x = 5; x < 500; x = x + 100){
+    Dice bob = new Dice(x, y);  
+     bob.show();
+    }
+
+  }
   
-  System.out.println(counter);
   fill(#FFD586);
   rect(100, 510, 300, 80, 10);
   fill(#080707);
@@ -36,7 +46,7 @@ void draw(){
   }
 
   
-  }
+}
 
 
 
@@ -53,6 +63,7 @@ class Dice
     myX = x;
     myY = y;
   }
+
 
   void show()
   {
@@ -102,6 +113,9 @@ class Dice
     ellipse(myX + 65, myY + 70, 10, 10);
      counter = counter + 6;
   }
-} 
+}
+  
+  
+  
   
 }
